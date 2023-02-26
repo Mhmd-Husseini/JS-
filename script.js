@@ -37,3 +37,46 @@
     alert("Registration successful!");
   }
 });
+
+// Prompt the user to enter 10 numbers
+const numbers = [];
+for (let i = 0; i < 10; i++) {
+  let number = prompt(`Enter the ten numbers one after one `);
+  while (isNaN(number)) {
+    number = prompt(`This isn't a number, Please enter a valid number`);
+  }
+  numbers.push(parseInt(number));
+}
+
+function merge(arr1, arr2) {
+  let i = 0;
+  let j = 0;
+  let results = [];
+  while(i < arr1.length && j < arr2.length) {
+   if (arr2[j] > arr1[i]) {
+    results.push(arr1[i]);
+    i++;  
+   }else {
+    results.push(arr2[j])
+    j++
+   }
+  }
+  while(i < arr1.length){
+   results.push(arr1[i]);
+   i++;
+  }
+  while(j < arr2.length){
+   results.push(arr2[j]);
+   j++;
+  }
+  return results
+ }
+ function mergeSort(arr){
+  if (arr.length <= 1) return arr;
+  let mid = Math.floor(arr.length/2);
+  let left = mergeSort(arr.slice(0, mid));
+  let right = mergeSort(arr.slice(mid));
+   return merge(left, right);
+ }
+const sortedNumbers = mergeSort(numbers);
+alert(sortedNumbers);
