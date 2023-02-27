@@ -116,3 +116,22 @@ function checkPalindrome() {
     } else {
       result.innerHTML = `Your age is not a prime number`;
     } }
+
+class Course {
+  constructor(name, instructor, credits) {
+    this.name = name;
+    this.instructor = instructor;
+    this.credits = credits;
+  }}
+const form2 = document.getElementById("course-form");
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const name = form2.elements["name"].value.trim();
+  const instructor = form2.elements["instructor"].value.trim();
+  const credits = parseInt(form2.elements["credits"].value.trim());
+  let course = new Course(name, instructor, credits);
+  form2.reset();
+});
+
+
+
