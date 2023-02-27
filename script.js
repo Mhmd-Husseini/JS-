@@ -159,4 +159,18 @@ function reverseNumbers() {
     var result = input.substr(first_consonants.length) + first_consonants + "ay";
     document.getElementById("convertResult").innerHTML = result;
 }
+var box = document.querySelector(".box");
+var position = 0;
+var direction = 1;
+var speed = 5;
 
+function animate() {
+  position += direction * speed;
+  if (position >= 200 || position <= 0) {
+    direction = -direction;
+  }
+  box.style.left = position + "px";
+  requestAnimationFrame(animate);
+}
+
+requestAnimationFrame(animate);

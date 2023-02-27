@@ -34,3 +34,8 @@ button[type="submit"]:hover {
 }
 
 #my-section{background-color: #007bff;}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  position: relative;}
