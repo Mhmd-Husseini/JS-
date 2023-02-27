@@ -18,7 +18,7 @@
       "Password must contain at least 8 characters, one special character, and one uppercase letter"
     );
   }
-
+  
   if (password !== confirmPassword) {
     errors.push("Passwords do not match");
   }
@@ -38,14 +38,13 @@
   }
 });
 
-// Prompt the user to enter 10 numbers
 const numbers = [];
-for (let i = 0; i < 10; i++) {
+while(numbers.length<10) {
   let number = prompt(`Enter the ten numbers one after one `);
   while (isNaN(number)) {
     number = prompt(`This isn't a number, Please enter a valid number`);
   }
-  numbers.push(parseInt(number));
+    numbers.push(parseInt(number));
 }
 
 function merge(arr1, arr2) {
@@ -80,3 +79,21 @@ function merge(arr1, arr2) {
  }
 const sortedNumbers = mergeSort(numbers);
 alert(sortedNumbers);
+
+function isPalindrome(str) {
+  if (str.length < 2) {
+    return true;
+  }
+  if (str.charAt(0) === str.charAt(str.length - 1)) {
+    return isPalindrome(str.substring(1, str.length - 1));
+  }}
+function checkPalindrome() {
+  const palindromeText = document.getElementById("palindrome-text").value.toLowerCase();
+  const palindromeResult = document.getElementById("palindrome-result");
+  if (isPalindrome(palindromeText)) {
+    palindromeResult.innerText = `it is a palindrome!`;
+  } else {
+    palindromeResult.innerText = `it is not a palindrome.`;
+  }
+}
+
