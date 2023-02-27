@@ -32,21 +32,6 @@
   </div>
 </form>
 
-<div>
-  <label>Enter a string:</label>
-  <input type="text" id="palindrome-text" />
-  <button type="button" onclick="checkPalindrome()" id="B">Check if Palindrome</button>
-  <p id="palindrome-result"></p>
-</div>
-<div>
-  <label>Enter your year of birth:</label>
-  <input type="number" id="birth-year" name="birth-year">
-  <button onclick="checkPrime()">Check if your age is prime</button>
-  <p id="result"></p>
-</div>
-
-<button id="my-section">touch to alert</button>
-
 <form id="course-form">
   <div class="form-group">
     <label>Course Name:</label>
@@ -62,6 +47,26 @@
     <button type="submit">Submit</button>
   </div>
 </form>
+
+<div>
+  <label>Enter a string:</label>
+  <input type="text" id="palindrome-text" />
+  <button type="button" onclick="checkPalindrome()" id="B">Check if Palindrome</button>
+  <p id="palindrome-result"></p>
+</div>
+<div>
+  <label>Enter your year of birth:</label>
+  <input type="number" id="birth-year" name="birth-year">
+  <button onclick="checkPrime()">Check if your age is prime</button>
+  <p id="result"></p>
+</div>
+<div>
+  <label>Enter a string with numbers:</label>
+  <input type="text" id="stringNumbers" >
+  <button onclick="reverseNumbers()">See the numbers reversed in the string</button>
+  <input type="text" id="output" readonly />
+</div>
+
 <script src="script.js" type="text/javascript"></script>
 </body>
 </html>

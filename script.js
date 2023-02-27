@@ -133,5 +133,16 @@ form.addEventListener("submit", (event) => {
   form2.reset();
 });
 
+function reverseNumbers() {
+  const input = document.getElementById("stringNumbers").value;
+  const output = document.getElementById("output");
+  const numbers = input.match(/\d+/g);
+  if (numbers) {
+    const reversed = input.split(/\d+/g).reduceRight((result, value, index) => result.concat(value, numbers[index]), '');
+    output.innerText = reversed;
+  } else {
+    output.innerText = "No numbers found!";
+  }
+}
 
 
