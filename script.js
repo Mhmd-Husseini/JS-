@@ -94,6 +94,25 @@ function checkPalindrome() {
     palindromeResult.innerText = `it is a palindrome!`;
   } else {
     palindromeResult.innerText = `it is not a palindrome.`;
-  }
-}
+  }}
 
+  function checkPrime() {
+    const birthYear = document.getElementById("birth-year").value;
+    const currentYear = new Date().getFullYear();
+    const age = currentYear - birthYear;
+    let isPrime = true;
+  
+    if (age <= 1) {
+      isPrime = false;
+    } else {
+      for (let i = 2; i < age; i++) {
+        if (age % i === 0) {
+          isPrime = false;
+          break;
+        }}}
+    const result = document.getElementById("result");
+    if (isPrime) {
+      result.innerHTML = `Your age is a prime number!`;
+    } else {
+      result.innerHTML = `Your age is not a prime number`;
+    } }
