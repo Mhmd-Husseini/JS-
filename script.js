@@ -163,7 +163,6 @@ var box = document.querySelector(".box");
 var position = 0;
 var direction = 1;
 var speed = 5;
-
 function animate() {
   position += direction * speed;
   if (position >= 200 || position <= 0) {
@@ -172,5 +171,12 @@ function animate() {
   box.style.left = position + "px";
   requestAnimationFrame(animate);
 }
-
 requestAnimationFrame(animate);
+
+const backToTopButton = document.querySelector("#back-to-top");
+backToTopButton.addEventListener("click", function() {
+	window.scrollTo({
+		top: 0,
+		behavior: "smooth"
+	});
+});
