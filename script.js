@@ -142,7 +142,21 @@ function reverseNumbers() {
     output.innerText = reversed;
   } else {
     output.innerText = "No numbers found!";
-  }
-}
+  }}
 
+  function convert() {
+    var input = document.getElementById("inputText").value;
+    var vowels = ["a", "e", "i", "o", "u"];
+    var first_consonants = "";
+
+    for (var i = 0; i < input.length; i++) {
+        if (vowels.indexOf(input[i]) === -1) {
+            first_consonants += input[i];
+        } else {
+            break;
+        }
+    }
+    var result = input.substr(first_consonants.length) + first_consonants + "ay";
+    document.getElementById("convertResult").innerHTML = result;
+}
 
